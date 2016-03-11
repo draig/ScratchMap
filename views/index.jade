@@ -1,5 +1,8 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/css/style.css', type='text/css' )
+    script(src='/js/jquery.js')
+    title #{title}
+  body
+    h1 Hello World
