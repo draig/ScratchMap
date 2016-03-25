@@ -1,0 +1,12 @@
+{
+  "name": "ScratchMap",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "latest",
+    "backbone": "latest",
+    "underscore": "latest",
+    "requirejs": "^2.2.0",
+    "backbone.marionette": "marionette#^2.4.5",
+    "bootstrap": "^3.3.6"
+  }
+}

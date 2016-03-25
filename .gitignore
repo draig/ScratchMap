@@ -1,4 +1,5 @@
 node_modules/
+public/js/thirdparty/
 .idea/
 *.iml
 *.ipr
