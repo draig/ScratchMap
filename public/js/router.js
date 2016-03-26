@@ -1,24 +1,23 @@
-require([
+define([
         'backbone',
         'backbone.marionette'
     ],
     function (Backbone, Marionette) {
         'use strict';
 
-        var Router = Marionette.AppRouter({
+        var Router = Marionette.AppRouter.extend({
             appRoutes: {
-                'blog/': 'blogList',
-                'blog/:entry': 'blogEntry'
+                'login': 'login',
+                '': 'home'
             },
 
             /** Initialize our controller with the options passed into the application,
              such as the initial posts list.
              */
             initialize: function () {
-                this.controller = new Controller({
-                    initialData: this.getOption('initialData')
-                });
+                console.log("initialize a Router");
             }
+
         });
 
         return Router;
