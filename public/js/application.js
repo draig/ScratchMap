@@ -1,10 +1,8 @@
 define([
 	'backbone',
-    'router',
-	'communicator',
-    'controller'
+	'communicator'
 ],
-function(Backbone, Router, Communicator, Controller) {
+function(Backbone, Communicator) {
     'use strict';
 
 	var App = new Backbone.Marionette.Application();
@@ -12,23 +10,17 @@ function(Backbone, Router, Communicator, Controller) {
 	/* Add application regions here */
     App.addRegions({
         headerRegion: "#header-region",
-        mapRegion: "#map-region"
-    });
-
-    App.router = new Router({
-        controller: new Controller()
+        mainRegion: "#main-region"
     });
 
     /* Add initializers here */
 	App.addInitializer( function () {
-        Backbone.history.start();
         console.log("initialize a Application");
 		/*document.body.innerHTML = welcomeTmpl({ success: "CONGRATS!" });
 		Communicator.mediator.trigger("APP:START");*/
 	});
 
     App.on("initialize:after", function(){
-
 //        // Creating a generic ItemView for Header
 //        headerView = new HeaderView();
 //

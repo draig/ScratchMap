@@ -1,9 +1,9 @@
 define([
         'backbone.marionette',
-        'application',
+        'communicator',
         'views/map'
     ],
-    function (Marionette, App, MapView) {
+    function (Marionette, Communicator, MapView) {
         'use strict';
 
         var Controller = Marionette.Object.extend({
@@ -34,12 +34,11 @@ define([
 
             login: function () {
                 console.log("relocate to login");
+                Communicator.mediator.trigger("redirect:login");
             },
             home: function () {
                 console.log("relocate to home");
-                var mapView = new MapView();
-                // Add Header View to region to be render
-                App.mapRegion.show(mapView);
+                Communicator.mediator.trigger("redirect:home");
             }
 
             /** List all blog entrys with a summary */

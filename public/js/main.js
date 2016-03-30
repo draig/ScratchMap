@@ -1,9 +1,16 @@
 require([
         'backbone',
-        'application'
+        'application',
+        'router'
     ],
-    function (Backbone, App) {
+    function (Backbone, App, Router) {
         'use strict';
 
+        App.router = new Router({});
+
         App.start();
+
+        Backbone.history.start({
+            root: '/'
+        });
     });
