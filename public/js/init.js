@@ -5,7 +5,8 @@ require.config({
         'backbone': 'thirdparty/backbone/backbone',
         'backbone.babysitter': 'thirdparty/backbone.babysitter/lib/backbone.babysitter',
         'backbone.wreqr': 'thirdparty//backbone.wreqr/lib/backbone.wreqr',
-        'backbone.marionette': 'thirdparty//backbone.marionette/lib/core/backbone.marionette'
+        'backbone.marionette': 'thirdparty//backbone.marionette/lib/core/backbone.marionette',
+        'text': 'thirdparty/text/text'
     },
     shim: {
         underscore: {
