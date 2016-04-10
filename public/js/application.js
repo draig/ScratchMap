@@ -9,8 +9,8 @@ function(Backbone, Communicator) {
 
 	/* Add application regions here */
     App.addRegions({
-        headerRegion: "#header-region",
-        mainRegion: "#main-region"
+        headerRegion: "#sm-header",
+        contentRegion: "#sm-content"
     });
 
     /* Add initializers here */

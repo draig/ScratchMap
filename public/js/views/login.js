@@ -7,13 +7,16 @@ define([
 
         return Marionette.ItemView.extend({
 
-            el: '#yandex-map',
+            tagName: 'form',
 
             template: _.template(loginTmpl),
 
+            onRender: function(){
+                this.$el.addClass("form-signin");
+            },
+
             initialize: function() {
                 console.log("initialize a Login View");
-                this.$el.hide()
             }
         });
     });

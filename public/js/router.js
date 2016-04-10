@@ -2,9 +2,10 @@ define([
         'backbone',
         'backbone.marionette',
         'application',
-        'views/map'
+        'views/map',
+        'views/login'
     ],
-    function (Backbone, Marionette, App, Map) {
+    function (Backbone, Marionette, App, Map, Login) {
         'use strict';
 
         var Router = Marionette.AppRouter.extend({
@@ -16,11 +17,13 @@ define([
             controller: {
                 login: function () {
                     console.log("relocate to login");
+                    App.contentRegion.empty();
+                    App.contentRegion.show(new Login());//
                     //Communicator.mediator.trigger("redirect:login");
                 },
                 home: function () {
                     console.log("relocate to home");
-                    App.mainRegion.show(new Map());
+                    App.contentRegion.show(new Map());//
                 }
             },
 
@@ -30,7 +33,6 @@ define([
             initialize: function () {
                 console.log("initialize a Router");
             }
-
         });
 
         return Router;
