@@ -1,2 +1,6 @@
-https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
-blog.joanboixados.com/skeleton-for-a-backbone-marionette-application-using-require-js-bower-grunt-and-less
+Technical task
+1. login with Device (email check + password recovery)
+2. search via google place api
+3. save place with photo and description.
+4. share to social networks
+2 weeks
